@@ -3,7 +3,7 @@
 
 let a = 2;
 let power = 1;
-while (power >= 1 && power <= 10) {
+while (power <= 10) {
     console.log('result = ', a ** power);
     power++;
 }
@@ -12,16 +12,19 @@ while (power >= 1 && power <= 10) {
 // 1 *.Преобразовать 1 задачу в функцию, принимающую на вход степень, 
 //в которую будет возводиться число 2
 
-function pwr(number) {
-    number = +number
+function pwr() {
     if (number && !isNaN(number)) {
         let b = 2;
-        console.log('Your result = ', b ** userNumber);
+        let power_b = 1;
+        while (power_b <= number) {
+           console.log('Your result = ', b ** power_b); 
+           power_b++;
+        }
     } else console.log('Error. Not a number');
 }
 
 let userNumber = prompt('Enter your number');
-pwr(userNumber);
+pwr(number);
 
 
 // 2. Написать скрипт, который выведет 5 строк в консоль таким образом, чтобы в первой строчке выводилось:), во второй:):) и так далее
@@ -44,16 +47,16 @@ for (let count = 1; count <= 5; count++) {
 // e.g.function printSmile(stroka, numberOfRows)
 
 function printSmile(stroka, numberOfRows) {
-    numberOfRows = +numberOfRows
     if (numberOfRows && !isNaN(numberOfRows)) {
-        for (numberOfRows = 1; numberOfRows <= userRows; numberOfRows++) {
-            console.log(stroka.repeat(numberOfRows));
+        for (let i = 1; i <= numberOfRows: i++) {
+            console.log(stroka.repeat(i));
         }
     } else console.log('Error. Not a number');
 }
 
 let stroka = prompt('Enter your symbol');
 let userRows = prompt('Enter your number of stroke');
+
 printSmile(stroka, userRows);
 
 
@@ -63,8 +66,8 @@ printSmile(stroka, userRows);
 // В консоли: Слово(word) состоит из(число) гласных и(число) согласных букв
 // Проверки: 'case', 'Case', 'Check-list'
 
-let vowels = ['a', 'e', 'i', 'o', 'u'];
-let consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
+let vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+let consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z'];
 let countVowels = 0;
 let countConsonants = 0;
 
